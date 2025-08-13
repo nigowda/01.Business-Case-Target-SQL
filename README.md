@@ -1,34 +1,90 @@
-# 🎯 Target E-commerce SQL Case Study
+# 🛒 Target Brazil E-Commerce SQL Case Study
 
-A comprehensive SQL case study conducted on Brazilian E-commerce data, using BigQuery and analytical SQL techniques to explore trends, geography-based behaviors, seasonal effects, delivery metrics, and payment patterns.
+## 📌 Overview
+This case study analyzes over 100,000 e-commerce orders from Target Brazil between 2016 and 2018. Using SQL on Google BigQuery, the project reveals insights into customer behavior, seasonal trends, delivery performance, and payment patterns, supporting data-driven business decisions.
 
 ---
 
-## 📁 Dataset Overview
+## 📊 Dataset Summary
 
-The dataset consists of multiple tables:
-- `customers`
-- `orders`
-- `order_items`
-- `payments`
-- `geolocation`
+- 📁 Source: [Google Drive Folder](https://drive.google.com/drive/folders/1TGEc66YKbD443nslRi1bWgVd238gJCnb)
+- 📦 Format: 8 CSV files
+- 📂 Tables Used:
+  - `orders`
+  - `order_items`
+  - `customers`
+  - `payments`
+  - `geolocation`
+  - `products`
+  - `reviews`
+  - `sellers`
 
-The data is hosted in the `TARGET_SQL` dataset on BigQuery.
+---
 
-📌 Key Takeaways
-- Significant growth in order volume from 2017 to 2018.
-- Afternoon and night are peak times for placing orders.
-- Southeastern Brazil leads in customer count and total sales.
-- Freight costs and delivery delays vary drastically across regions.
-- Credit cards dominate payment methods, with installment plans being common.
+## 🔍 Key Insights
 
-⚙️ Tech Stack
-- Google BigQuery
-- SQL
-- Data Studio / Jupyter (for visualization - optional)  
+### 🧭 Exploratory Analysis
+- Identified schema and data types across all tables
+- Mapped customer distribution by city and state
+- Extracted order time range and seasonal patterns
 
-📬 Contact  
- Nishanth Gowda  
-  📧 [nishanthgowdahsn27@gmail.com]  
-  🔗 [LinkedIn](https://www.linkedin.com/in/nishanth-gowda-hassan/)  
-  📂 [Portfolio](https://nigowda.github.io/Nishanth_Gowda_Portfolio/)  
+### 📈 Order Trends
+- Yearly and monthly growth in order volume
+- Time-of-day segmentation: Dawn, Morning, Afternoon, Night
+- Monthly order counts per state
+
+### 💰 Economic Impact
+- % increase in payment value (Jan–Aug 2017 vs 2018)
+- Total & average order price and freight by state
+
+### 🚚 Delivery Performance
+- Delivery time vs estimated delivery date
+- Top 5 states by:
+  - Highest/lowest average freight cost
+  - Fastest/slowest delivery time
+  - Most efficient delivery vs estimated date
+
+### 💳 Payment Analysis
+- Monthly breakdown of payment types
+- Distribution of orders by installment count
+
+---
+
+## 🧠 SQL Techniques Applied
+
+- Time-series analysis using `EXTRACT`, `FORMAT_DATETIME`, `LAG`
+- Delivery metrics using `DATE_DIFF`
+- State-level aggregations with `JOIN`, `GROUP BY`, and CTEs
+- Payment trend analysis by type and installment count
+- Seasonal and hourly segmentation of order behavior
+
+> ✅ All queries executed on BigQuery using the `TARGET_SQL` schema.
+
+---
+
+## 🛠️ Tech Stack
+
+- SQL (Google BigQuery)
+- Python (for future visualizations)
+- Jupyter / Data Studio (optional dashboarding)
+
+---
+
+## 📁 Repository Contents
+
+- `Target_SQL_NishanthGowda.docx`: Full case study document
+- `README.md`: Project overview and insights
+- SQL queries embedded in case study file
+
+---
+
+## 📬 Contact
+
+- **Name**: Nishanth Gowda  
+- **Email**: [nishanthgowdahsn27@gmail.com](mailto:nishanthgowdahsn27@gmail.com)  
+- **LinkedIn**: [linkedin.com/in/nishanthgowda](https://www.linkedin.com/in/nishanthgowdahsn27/)  
+- **Portfolio**: [https://github.com/nigowda]
+
+---
+
+> ⭐ Feel free to fork, star, or reach out for collaboration
